@@ -1,8 +1,11 @@
 import React from 'react'
+import Pelicula from './Pelicula'
 
 function ListaPeliculas() {
   return (
-    <div>ListaPeliculas</div>
+    <div>
+        <Pelicula/>
+    </div>
   )
 }
 

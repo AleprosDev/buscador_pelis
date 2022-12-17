@@ -3,13 +3,11 @@ import Buscador from '../componentes/Buscador'
 
 
 function PaginaBuscador() {
-  const onBuscar = () => {
-    console.log(onBuscar)
-  };
+
 
   return (
     <div>
-        <Buscador onBuscar={onBuscar}/>
+        <Buscador/>
     </div>
   )
 }

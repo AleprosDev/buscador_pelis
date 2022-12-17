@@ -1,7 +1,6 @@
 import {React, useState} from 'react'
 
-function Buscador({onBuscar}) {
-  
+function Buscador() {
   const [criterioBusqueda, setCriterioBusqueda] = useState('');
   return (
   <form className='items-center ml-[35%] max-w-[30em] justify-center'>
@@ -16,10 +15,12 @@ function Buscador({onBuscar}) {
     </div>
 
     <div className=' inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-1'>
-      <button type='submit'
-        onClick={(parametros) =>{
-          onBuscar(parametros.criterioBusqueda)
-        } }
+      <button type='button'
+          onClick={() => {
+            if(criterioBusqueda.length > 2) {
+              onBuscar(criterioBusqueda)
+            }
+          }}
         > 
         Buscar
       </button>
