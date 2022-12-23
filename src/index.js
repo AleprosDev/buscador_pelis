@@ -1,27 +1,39 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
 import {
   createBrowserRouter,
   RouterProvider,
-  Route
 } from "react-router-dom";
-import './index.css';
-import App from './Main';
-import reportWebVitals from './reportWebVitals';
-import ErrorPage from './Paginas/ErrorPage';
-import PaginaDetalles from './Paginas/PaginaDetalles';
+import Home from './componentes/Home'
+import Education from './componentes/Education'
+import Experience from './componentes/Experience'
+import Portfolio from './componentes/Portfolio'
+import Skills from './componentes/Skills'
+import App from './App';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>,
-    errorElement: <ErrorPage />,
+    element: <Home/>
   },
   {
-    path: "/detalles",
-    element: <PaginaDetalles/>,
+    path: "/education",
+    element: <Education/>
   },
-
+  {
+    path: "/experience",
+    element: <Experience/>
+  },
+  {
+    path: "/portfolio",
+    element: <Portfolio/>
+  },
+  {
+    path: "/skills",
+    element: <Skills/>
+  },
 ]);
 
 
@@ -29,7 +41,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  
+    <App/>
     <RouterProvider router={router} />
   </React.StrictMode>
 );

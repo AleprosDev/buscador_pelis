@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap');
+
+@layer base {
+  body {
+    @apply font-[Roboto+Slab];
+  }
+  li {
+    @apply px-4;
+    @apply cursor-pointer;
+  }
+}
+
+
+/* paleta de trabajo
+  #101419 Rich Black
+  #468C98 Steel teal
+  #476C9B Queen blue
+  #ADD9F4 Uranian blue
+  #984447 Cordovan
+*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
