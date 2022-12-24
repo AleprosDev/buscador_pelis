@@ -6,34 +6,14 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Home from './componentes/Home'
-import Education from './componentes/Education'
-import Experience from './componentes/Experience'
-import Portfolio from './componentes/Portfolio'
-import Skills from './componentes/Skills'
 import App from './App';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>
+    element: <App/>
   },
-  {
-    path: "/education",
-    element: <Education/>
-  },
-  {
-    path: "/experience",
-    element: <Experience/>
-  },
-  {
-    path: "/portfolio",
-    element: <Portfolio/>
-  },
-  {
-    path: "/skills",
-    element: <Skills/>
-  },
+
 ]);
 
 
@@ -41,7 +21,6 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App/>
     <RouterProvider router={router} />
   </React.StrictMode>
 );

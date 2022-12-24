@@ -1,11 +1,36 @@
 import React, {useState} from 'react'
+import { useEffect } from 'react';
 import AP from '../assets/AP.png'
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
+import * as Scroll from 'react-scroll';
+import { Link,Button, Element, Events, EventsanimateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
 
 function NavBar() {
 
+  useEffect(() => {
+    Events.scrollEvent.register('begin', (to, element) => {
+      console.log('begin', to, element);
+    });
+
+    Events.scrollEvent.register('end', (to, element) => {
+      console.log('end', to, element);
+    });
+
+    scrollSpy.update();
+
+    return () => {
+      Events.scrollEvent.remove('begin');
+      Events.scrollEvent.remove('end');
+    };
+  }, []);
+
+
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
+
+  const scrollToAlgo = () => {
+    scroller.scrollTo(100);
+  };
 
   return (
     <section className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#101419] text-gray-300'>
@@ -16,11 +41,26 @@ function NavBar() {
       {/* menu */}
 
         <ul className='hidden md:flex items-center'>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>Home</li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>About</li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>Skills</li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>Works</li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>Contact</li>
+          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
+            <Link to="home" smooth='easeInOutQuart' offset={50} duration={1000} onClick={scrollToAlgo}> 
+          Home
+        </Link></li>
+          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
+            <Link to="about" smooth='easeInOutQuart' offset={50} duration={1000}>
+          About
+        </Link></li>
+          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
+            <Link to="skills" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Skills
+        </Link></li>
+          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
+            <Link to="work" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Works
+        </Link></li>
+          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
+            <Link to="contact" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Contacts
+        </Link></li>
         </ul>
 
 
@@ -32,16 +72,31 @@ function NavBar() {
 
       {/* Movil menu */}
       <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#101419] flex flex-col justify-center items-center'}>
-          <li className='py-6 text-4xl hover:bg-[#102634]'>Home</li>
-          <li className='py-6 text-4xl hover:bg-[#102634]'>About</li>
-          <li className='py-6 text-4xl hover:bg-[#102634]'>Skills</li>
-          <li className='py-6 text-4xl hover:bg-[#102634]'>Works</li>
-          <li className='py-6 text-4xl hover:bg-[#102634]'>Contact</li>
+          <li className='py-6 text-4xl hover:bg-[#102634]'>
+            <Link onClick={handleClick} to="home" smooth='easeInOutQuart' offset={50} duration={1000} onClick={scrollToAlgo}> 
+          Home
+        </Link></li>
+          <li className='py-6 text-4xl hover:bg-[#102634]'>
+            <Link onClick={handleClick} to="about" smooth='easeInOutQuart' offset={50} duration={1000}>
+          About
+        </Link></li>
+          <li className='py-6 text-4xl hover:bg-[#102634]'>
+            <Link onClick={handleClick} to="skills" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Skills
+        </Link></li>
+          <li className='py-6 text-4xl hover:bg-[#102634]'>
+            <Link onClick={handleClick} to="work" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Works
+        </Link></li>
+          <li className='py-6 text-4xl hover:bg-[#102634]'>
+            <Link onClick={handleClick} to="contact" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Contacts
+        </Link></li>
         </ul>
 
 
       {/* Social icons */}
-      <section className='flex fixed flex-col top-[35%] left-0  '>
+      <section className='md:flex fixed flex-col top-[35%] left-0 hidden'>
         <ul>
           <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] rounded-lg'>
             <a href="/" className='flex justify-between items-center w-full text-gray-300'

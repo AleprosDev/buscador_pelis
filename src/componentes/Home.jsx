@@ -3,10 +3,10 @@ import { AiFillCaretRight } from "react-icons/ai";
 
 function Home() {
   return (
-    <div name='home' className='bg-[#476C9B] w-full h-screen'>
+    <div name='home' className='bg-[#476C9B] w-full h-[765px] '>
       {/*container*/}
 
-      <section className='max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
+      <section className='max-w-[1000px] max-h-[1000px] mx-auto px-8 flex flex-col justify-center h-full'>
         <p className='text-[#662729] font-bold'>Hola, mi nombre es</p>
         <h1 className='text-4xl sm:text-7xl font-bold text-[#101419]'>Alejandro Pros</h1>
         <h2 className='text-4xl sm:text-7xl font-bold text-[#65aebb]'>Soy un front end developer</h2>
