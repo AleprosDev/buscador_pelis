@@ -1,36 +1,15 @@
 import React, {useState} from 'react'
-import { useEffect } from 'react';
 import AP from '../assets/AP.png'
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
-import * as Scroll from 'react-scroll';
-import { Link,Button, Element, Events, EventsanimateScroll as scroll, scrollSpy, scroller} from 'react-scroll'
+import { Link, EventsanimateScroll} from 'react-scroll'
+import Home from './Home';
 
 function NavBar() {
-
-  useEffect(() => {
-    Events.scrollEvent.register('begin', (to, element) => {
-      console.log('begin', to, element);
-    });
-
-    Events.scrollEvent.register('end', (to, element) => {
-      console.log('end', to, element);
-    });
-
-    scrollSpy.update();
-
-    return () => {
-      Events.scrollEvent.remove('begin');
-      Events.scrollEvent.remove('end');
-    };
-  }, []);
-
 
   const [nav, setNav] = useState(false)
   const handleClick = () => setNav(!nav)
 
-  const scrollToAlgo = () => {
-    scroller.scrollTo(100);
-  };
+
 
   return (
     <section className='fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#101419] text-gray-300'>
@@ -42,7 +21,7 @@ function NavBar() {
 
         <ul className='hidden md:flex items-center'>
           <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
-            <Link to="home" smooth='easeInOutQuart' offset={50} duration={1000} onClick={scrollToAlgo}> 
+            <Link to="home" smooth='easeInOutQuart' offset={50} duration={1000}> 
           Home
         </Link></li>
           <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
@@ -72,8 +51,8 @@ function NavBar() {
 
       {/* Movil menu */}
       <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#101419] flex flex-col justify-center items-center'}>
-          <li className='py-6 text-4xl hover:bg-[#102634]'>
-            <Link onClick={handleClick} to="home" smooth='easeInOutQuart' offset={50} duration={1000} onClick={scrollToAlgo}> 
+          <li  className='py-6 text-4xl hover:bg-[#102634]'>
+            <Link ref={Home} onClick={handleClick} to="home" smooth='easeInOutQuart' offset={50} duration={1000}> 
           Home
         </Link></li>
           <li className='py-6 text-4xl hover:bg-[#102634]'>

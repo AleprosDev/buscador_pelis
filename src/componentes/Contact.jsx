@@ -15,7 +15,7 @@ function Contact() {
             <input className='my-4 p-2 bg-white text-black rounded-lg' type="text" placeholder='Name' name='name' />
             <input className='mb-4 p-2 bg-white text-black rounded-lg' type="email" placeholder='Email' name='email' />
             <textarea className='bg-white p-2 rounded-lg' name="message" rows="8"></textarea>
-            <button className='text-black border-2 rounded-lg hover:bg-[#c74044] hover:border-[#ac4e51] px-4 py-3 my-8 mx-auto flex items-center'>Trabajemos juntos!</button>
+            <button className='text-black border-2 bg-[#ADB5F4] rounded-lg hover:bg-[#c74044] hover:border-[#ac4e51] px-4 py-3 my-8 mx-auto flex items-center'>Trabajemos juntos!</button>
         </form>
     </section>
   )
