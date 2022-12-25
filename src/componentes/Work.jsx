@@ -10,7 +10,7 @@ function Work() {
                 <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-black'>
                     Trabajos
                 </p>
-                <p className='py-6'>
+                <p className='py-6 text-4xl font-medium'>
                     Fijate alguno de mis trabajos recientes
                 </p>
             </div>

@@ -66,11 +66,11 @@ function NavBar() {
           About
         </Link></li>
           <li className='py-6 text-4xl hover:bg-[#102634]'>
-            <Link onClick={handleClick} to="skills" smooth='easeInOutQuart' offset={50} duration={1000}>
+            <Link onClick={handleClick} to="skills" smooth='easeInOutQuart' offset={40} duration={1000}>
           Skills
         </Link></li>
           <li className='py-6 text-4xl hover:bg-[#102634]'>
-            <Link onClick={handleClick} to="work" smooth='easeInOutQuart' offset={50} duration={1000}>
+            <Link onClick={handleClick} to="work" smooth='easeInOutQuart' offset={-12} duration={1000}>
           Works
         </Link></li>
           <li className='py-6 text-4xl hover:bg-[#102634]'>
@@ -83,26 +83,26 @@ function NavBar() {
       {/* Social icons */}
       <section className='md:flex fixed flex-col top-[35%] left-0 hidden'>
         <ul>
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] rounded-lg'>
-            <a href="/" className='flex justify-between items-center w-full text-gray-300'
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] hover:bg-white rounded-lg'>
+            <a href="/" className='flex justify-between items-center w-full text-gray-300 hover:text-[#662729]'
             > Github <AiFillGithub size={30}/>
             </a>
           </li>
 
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] rounded-lg mt-1'>
-            <a href="/" className='flex justify-between items-center w-full text-gray-300'
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] hover:bg-white rounded-lg mt-1'>
+            <a href="/" className='flex justify-between items-center w-full text-gray-300 hover:text-[#0073B1]'
             > Linkedin <AiFillLinkedin size={30}/>
             </a>
           </li>
 
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] rounded-lg mt-1'>
-            <a href="/" className='flex justify-between items-center w-full text-gray-300'
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] hover:bg-white rounded-lg mt-1'>
+            <a href="/" className='flex justify-between items-center w-full text-gray-300 hover:text-[#4EA6E9]'
             > Twitter <AiFillTwitterCircle size={30}/>
             </a>
           </li>
 
-          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] rounded-lg mt-1'>
-            <a href="/" className='flex justify-between items-center w-full text-gray-300'
+          <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#101419] hover:bg-white rounded-lg mt-1'>
+            <a href="/" className='flex justify-between items-center w-full text-gray-300 hover:text-black'
             > Email <AiFillMail size={30}/>
             </a>
           </li>
