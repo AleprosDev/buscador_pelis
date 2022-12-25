@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import AP from '../assets/AP.png'
 import { AiFillGithub, AiFillLinkedin, AiFillTwitterCircle, AiFillMail } from "react-icons/ai";
-import { Link, EventsanimateScroll} from 'react-scroll'
+import { Link} from 'react-scroll'
 import Home from './Home';
 
 function NavBar() {
@@ -20,26 +20,32 @@ function NavBar() {
       {/* menu */}
 
         <ul className='hidden md:flex items-center'>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
-            <Link to="home" smooth='easeInOutQuart' offset={50} duration={1000}> 
+
+
+          <Link className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center justify-center w-[75px] cursor-pointer'
+          to="home" smooth='easeInOutQuart' offset={50} duration={1000}>
           Home
-        </Link></li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
-            <Link to="about" smooth='easeInOutQuart' offset={50} duration={1000}>
+          </Link>
+
+          <Link className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center justify-center w-[75px] cursor-pointer'
+          to="about" smooth='easeInOutQuart' offset={50} duration={1000}>
           About
-        </Link></li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
-            <Link to="skills" smooth='easeInOutQuart' offset={50} duration={1000}>
+          </Link>
+
+          <Link className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center justify-center w-[75px] cursor-pointer'
+          to="skills" smooth='easeInOutQuart' offset={50} duration={1000}>
           Skills
-        </Link></li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
-            <Link to="work" smooth='easeInOutQuart' offset={50} duration={1000}>
-          Works
-        </Link></li>
-          <li className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center '>
-            <Link to="contact" smooth='easeInOutQuart' offset={50} duration={1000}>
+          </Link>
+
+          <Link className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center justify-center w-[75px] cursor-pointer'
+          to="work" smooth='easeInOutQuart' offset={50} duration={1000}>
+          Work
+          </Link>
+
+          <Link className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center justify-center w-[75px] cursor-pointer'
+          to="contact" smooth='easeInOutQuart' offset={50} duration={1000}>
           Contacts
-        </Link></li>
+          </Link>
         </ul>
 
 

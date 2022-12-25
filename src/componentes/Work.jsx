@@ -17,7 +17,7 @@ function Work() {
 
         {/*container*/}
 
-            <section className='grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-[10px]'>
+            <section id='seccionTrabajo' className='grid sm:grid-cols-2 md:grid-cols-3 gap-4 mt-[10px]'>
 
                 {/*grid item*/}
                 <div style={{backgroundImage: `url(${Img_test})`}}

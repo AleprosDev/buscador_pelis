@@ -1,7 +1,11 @@
 import React from 'react'
-import { AiFillCaretRight } from "react-icons/ai"; 
+import { AiFillCaretRight } from "react-icons/ai";
+import { Link } from 'react-scroll';
 
 function Home() {
+
+
+
   return (
     <div name='home' className='bg-[#476C9B] w-full h-[765px] '>
       {/*container*/}
@@ -15,9 +19,11 @@ function Home() {
         </p>
         <div>
           <button className='font-bold text-black group border-2 px-10  py-3 my-2 flex items-center rounded-lg hover:bg-[#984447] hover:border-[#984447] hover:transition-colors hover:text-[#65aebb]'>
-            Esto hice 
-            <span className='group-hover:rotate-90 duration-300 ml-3'>
-              <AiFillCaretRight size='25px' className='ml-4 mt-[2px]'/>
+            <Link className='' to='work' smooth={true} >
+            <p>Esto hice</p>
+            </Link>
+            <span className='flex group-hover:rotate-90 duration-300 ml-3 '>
+              <AiFillCaretRight size='25px' className='ml-[10px] mt-[2px]'/>
             </span>
 
           </button> 
