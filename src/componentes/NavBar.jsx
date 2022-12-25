@@ -38,7 +38,7 @@ function NavBar() {
           </Link>
 
           <Link className='hover:bg-[#83a4b9] hover:transition-colors duration-400 hover:text-[black] flex h-[80px] items-center justify-center w-[75px] cursor-pointer'
-          to="work" smooth='easeInOutQuart' offset={50} duration={1000}>
+          to="work" smooth='easeInOutQuart' offset={20} duration={1000}>
           Work
           </Link>
 

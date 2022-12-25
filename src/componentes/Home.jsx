@@ -19,7 +19,7 @@ function Home() {
         </p>
         <div>
           <button className='font-bold text-black group border-2 px-10  py-3 my-2 flex items-center rounded-lg hover:bg-[#984447] hover:border-[#984447] hover:transition-colors hover:text-[#65aebb]'>
-            <Link className='' to='work' smooth={true} >
+            <Link className='' to='work' smooth={true} offset={40} >
             <p>Esto hice</p>
             </Link>
             <span className='flex group-hover:rotate-90 duration-300 ml-3 '>
